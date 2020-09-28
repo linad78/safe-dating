@@ -1,0 +1,21 @@
+.Footer {
+    align-items: center;
+    border-bottom: 1px  rgb(39, 134, 189);
+    border-top: 5px solid rgb(39, 134, 189);
+}
+
+
+.insta__icon{
+    padding:3vw !important;
+    color: #8a3ab9 !important;
+    
+}
+
+.Link__icon{
+    padding: 3vw !important;
+    color:#0e76a8 !important;
+}
+.Face__icon{
+    padding: 3vw !important;
+    color:#3b5998!important;
+}

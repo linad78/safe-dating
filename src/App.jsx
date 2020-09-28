@@ -4,47 +4,46 @@ import Chats from './Chats';
 import './App.css';
 
 import Header from './Header';
-import TinderCards from './TinderCards';
-import SwipeButtons from './SwipeButtons';
-import LogIn from './LogIn';
-import SignUp from './SignUp';
-
+//import TinderCards from './components/cards/TinderCards';
+//import SwipeButtons from './components/swipes/SwipeButtons';
+import LogIn from './components/login/Login';
+import SignUp from './components/signup/SignUp'
+import HomePage from './screens/HomePage'
+import Platform from './screens/Platform'
+//import NewUserPage from "./screens/Platform";
+import PrivateRoute from "./components/routes/PrivateRoute";
+import NewUserPage from './screens/NewUserPage';
 
 
 function App() {
     return (
-        <div className="App">
+      <div className="App">
+        <Router>
+          <Switch>
+            {/* Tinder Cards */}
+            <Route path="/" exact component={HomePage} />
+            <PrivateRoute path="/platform" exact component={Platform} />
+            <Route path="/xyz" exact component={NewUserPage} />
 
-            <Router>
-                <Switch>
-                    <Route path="/chat"> {/* Individual chat screen */}
-                     <Header backButton="/" />
-                    </Route>
+            <Route path="/chat">
+              {" "}
+              {/* Individual chat screen */}
+              <Header backButton="/" />
+            </Route>
 
-                    {/* Chats screen */}
-                    <Route path="/chat">
-                        <Header backButton="/" />
-                        <Chats/>
-                    </Route>
-                    <Route path="/LogIn">
-                        <Header backButton="/" />
-                        <LogIn/>
-                        <SignUp/>
-                    </Route>
-
-                    {/* Tinder Cards */}
-                    <Route path="/">
-                        <Header />
-                        <TinderCards />
-                        {/*  Buttons bellow tinder cards */}
-                        <SwipeButtons />
-                        
-                    
-                    </Route>
-                </Switch>
-            </Router>
-
-        </div>
+            {/* Chats screen */}
+            <Route path="/chat">
+              <Header backButton="/" />
+              <Chats />
+            </Route>
+            <Route path="/LogIn">
+              <Header backButton="/" />
+              <LogIn />
+              <SignUp />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     );
 }
 

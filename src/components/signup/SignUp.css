@@ -1,0 +1,41 @@
+#wrap {
+    background-color:lightgray;
+
+   background-size: cover;
+   padding: 5px;
+}
+
+legend {
+    color: #141823;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background: lightskyblue;
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 4px;  
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    
+}
+
+.signup-btn:hover {
+    background: lightslategray;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form  {
+   
+    margin-bottom: 20px;
+}
+
+  

@@ -12,6 +12,12 @@ const firebaseConfig = {
     measurementId: "G-RB6E0CH7GW"
 }
 
+export const signup = (email, password) => {
+  return firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+};
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const database = firebaseApp.firestore();

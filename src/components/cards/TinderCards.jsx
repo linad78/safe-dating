@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
-import database from'./Firebase';
+//import database from'../../Firebase';
 import './TinderCards.css';
 //import { Container, Div, CardContainer } from './styles';
 
