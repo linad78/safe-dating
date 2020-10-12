@@ -7,6 +7,7 @@ import Camera from 'react-html5-camera-photo'
 import 'react-html5-camera-photo/build/css/index.css'
 import { signup } from '../../config/firebase'
 
+
 //TODO: find a way to not type ..
 
 const Signup = () => {
@@ -20,7 +21,7 @@ const Signup = () => {
         console.log('takePhoto')
     }
 
-    const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup)
+    const {  inputs, handleInputChange, handleSubmit } = useSignUpForm(signup)
     const [showForm, setShowForm] = React.useState(0)
 
     React.useEffect(() => {
@@ -48,6 +49,21 @@ const Signup = () => {
                         <Input label="First Name" type="text" name="firstName" onChange={handleInputChange} value={inputs.firstName} required />
 
                         <Input label="Last Name" type="text" name="lastName" onChange={handleInputChange} value={inputs.lastName} required />
+                    </div>
+                    <div>
+                        <Input
+                            Label="Age"
+                            type="number"
+                            name="age"
+                            onChange={handleInputChange}
+                            value={inputs.age}
+                            placeholder="Select your age"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <Input onChange={(e) => this.handleChange(e)} type="number" name="minAge" placeholder="Minimum age " />
+                        <Input onChange={(e) => this.handleChange(e)} type="number" name="maxAge" placeholder="Maximum age " />
                     </div>
                     <div>
                         <Input label="Email" type="email" name="email" onChange={handleInputChange} value={inputs.email} required />

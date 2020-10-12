@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-
+import "firebase/auth";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyAWbZXDA-NC5dwaaalduxmVOFG1j-PDYdo",
@@ -12,14 +12,13 @@ const firebaseConfig = {
     measurementId: "G-RB6E0CH7GW"
 }
 
-export const signup = (email, password) => {
+export const signup = (firstName,lastName, email, password,gender,age) => {
   return firebase
     .auth()
-    .createUserWithEmailAndPassword(email, password)
+    .createUserWithEmailAndPassword(firstName,lastName,email, password,gender,age)
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const database = firebaseApp.firestore();
-
 export default database;

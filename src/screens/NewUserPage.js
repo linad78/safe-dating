@@ -16,6 +16,7 @@ export default function NewUserPage() {
         lastName:"",
         age: "",
         Gender: "",
+        location:"",
       })
       .then(function () {
         console.log("Document successfully written!");

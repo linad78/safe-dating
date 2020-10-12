@@ -90,10 +90,10 @@ class Login extends React.Component {
               <form id="Login">
                 <div className="form-group">
                   <input
-                    type="phone"
+                    type="userName"
                     className="form-control"
-                    id="inputPhone"
-                    placeholder="Phone"
+                    id="inputUserName"
+                    placeholder="User Name"
                   />
                 </div>
 
