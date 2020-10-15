@@ -14,7 +14,11 @@ const Signup = () => {
     const signup = () => {
         alert(`User Created!
          Name: ${inputs.firstName} ${inputs.lastName}
-         Email: ${inputs.email}`)
+         Email: ${inputs.email}
+         Age:${inputs.age}
+         MinAge:${inputs.minAge}
+         MaxAge:${inputs.maxAge}
+         Gender:${inputs.gender}`)
     }
     function handleTakePhoto(dataUri) {
         // Do stuff with the photo...
@@ -23,6 +27,7 @@ const Signup = () => {
 
     const {  inputs, handleInputChange, handleSubmit } = useSignUpForm(signup)
     const [showForm, setShowForm] = React.useState(0)
+// const useCurrentLocation=(options={})=>{
 
     React.useEffect(() => {
         if (navigator.geolocation) {
@@ -31,15 +36,19 @@ const Signup = () => {
                     setShowForm(1) //shows signuppage
                     console.log('Latitude is :', position.coords.latitude)
                     console.log('Longitude is :', position.coords.longitude)
+                    
                 },
                 function (error) {
                     alert(JSON.stringify(error))
-                    setShowForm(1)
+                    setShowForm(0)
                     if (error.code == error.PERMISSION_DENIED) console.log('you denied me :-(')
                 }
             )
         }
     }, [])
+    // Signup = () => {
+    //     this.props.history.push('/HomePage')
+    // }
 
     return (
         <>
@@ -62,8 +71,8 @@ const Signup = () => {
                         />
                     </div>
                     <div>
-                        <Input onChange={(e) => this.handleChange(e)} type="number" name="minAge" placeholder="Minimum age " />
-                        <Input onChange={(e) => this.handleChange(e)} type="number" name="maxAge" placeholder="Maximum age " />
+                        <Input lablel="MinAge" type="number" name="ninAge" onChange={handleInputChange} value={inputs.minage} placeholder="Min Age" required/>
+                        <Input lablel="MaxAge" type="number" name="naxAge" onChange={handleInputChange} value={inputs.minage} placeholder="Max Age" requierd/>
                     </div>
                     <div>
                         <Input label="Email" type="email" name="email" onChange={handleInputChange} value={inputs.email} required />

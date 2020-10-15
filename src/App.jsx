@@ -20,11 +20,11 @@ function App() {
                     <Route path="/" exact component={HomePage} />
                     <PrivateRoute path="/platform" exact component={Platform} />
                     <Route path="/xyz" exact component={NewUserPage} />
-
+              
                     {/* Chats screen */}
                     <Route path="/chat:person">
                         <Header backButton="/chat" />
-                        <ChatScreen/>
+                        <ChatScreen />
                     </Route>
                     <Route path="/chat">
                         <Header backButton="/" />
