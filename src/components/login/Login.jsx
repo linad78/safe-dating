@@ -80,17 +80,20 @@ class Login extends React.Component {
             <div id="LoginForm">
                 <div className="container">
                     <h1 className="form-heading">Date and Be Safe</h1>
-                    <p className="form-heading">Scammers are everywhere especially online they use fake pictures pretend to be someone else </p>
                     <p className="form-heading">
-                        {' '}
-                        Beware their seweet talk they will fall in love instantly use the being away serving their country as an excuse not to meet
-                        you{' '}
+                        Scammers are everywhere, especially online. They like to use fake pictures and pretend to be someone else.
                     </p>
                     <p className="form-heading">
                         {' '}
-                        Then when they garntee your love they use it to scam you by asking for money they are dnagerous and can ruin your life
+                        Beware of their sweet talk, they will pretend to fall in love with you, and then try to use that "love" for manipulation.{' '}
                     </p>
-                    <p className="form-heading ">Make sure to to report any suspicious users to protect yourself and others </p>
+                    <p className="form-heading">
+                        {' '}
+                        Scammers will try to manipulate their victims for money, or other nefarious purposes.
+                    </p>
+                    <p className="form-heading ">Make sure to report any suspicious users to protect yourself and others.
+
+ </p>
                     <div className="login-form">
                         <div className="main-div">
                             <div className="panel">
@@ -104,12 +107,10 @@ class Login extends React.Component {
                             </div>
                             <Form id="Login">
                                 <div className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
-                                    
                                     <Input name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} required />
                                 </div>
 
                                 <div className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
-                                    
                                     <Input
                                         name="password"
                                         placeholder="Password"
