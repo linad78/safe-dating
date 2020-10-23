@@ -60,7 +60,7 @@ class Login extends React.Component {
         if (response.email != "" || response.password != "") {
             this.props.history.push('/platform')
         } else {
-            alert("Please input again!")
+            alert("Must enter email and password to log in!")
         }
     }
     handleChange(event){
@@ -87,18 +87,13 @@ class Login extends React.Component {
                         {' '}
                         Beware of their sweet talk, they will pretend to fall in love with you, and then try to use that "love" for manipulation.{' '}
                     </p>
-                    <p className="form-heading">
-                        {' '}
-                        Scammers will try to manipulate their victims for money, or other nefarious purposes.
-                    </p>
-                    <p className="form-heading ">Make sure to report any suspicious users to protect yourself and others.
-
- </p>
+                    <p className="form-heading"> Scammers will try to manipulate their victims for money, or other nefarious purposes.</p>
+                    <p className="form-heading ">Make sure to report any suspicious users to protect yourself and others.</p>
                     <div className="login-form">
                         <div className="main-div">
                             <div className="panel">
                                 <img
-                                    className="header__logo"
+                                    className="header__logoForm"
                                     src="https://www.freelogodesign.org/file/app/client/thumb/c01a4d95-80ea-44a8-a590-21c4d8b140f2_200x200.png?1600112149245"
                                     alt="logo"
                                 />
@@ -106,11 +101,11 @@ class Login extends React.Component {
                                 <h1> Welcome! Please enter your username and password</h1>
                             </div>
                             <Form id="Login">
-                                <div className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
+                                <div className="mx-auto col-lg-3 col-md-6 col-lg-12">
                                     <Input name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} required />
                                 </div>
 
-                                <div className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
+                                <div className="mx-auto col-lg-3 col-md-6 col-lg-12">
                                     <Input
                                         name="password"
                                         placeholder="Password"

@@ -22,7 +22,7 @@ function App() {
                     <Route path="/xyz" exact component={NewUserPage} />
               
                     {/* Chats screen */}
-                    <Route path="/chat:person">
+                    <Route path="/chat/:person">
                         <Header backButton="/chat" />
                         <ChatScreen />
                     </Route>
